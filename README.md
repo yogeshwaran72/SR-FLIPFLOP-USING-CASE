@@ -1,4 +1,4 @@
-# SR-FLIPFLOP-USING-CASE
+# EXP 06-SR-FLIPFLOP-USING-CASE
 
 **AIM:**
 
@@ -34,38 +34,27 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-1.Type the program in Quartus software.
-
-2.Compile and run the program.
-
-3.Generate the RTL schematic and save the logic diagram.
-
-4.Create nodes for inputs and outputs to generate the timing diagram.
-
-5.For different input combinations generate the timing diagram.
+/* write all the steps invloved */
 
 **PROGRAM**
+
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by:PRIDEESH M RegisterNumber:212223040154
+*/
 ```
-Program for flipflops and verify its truth table in quartus using Verilog programming.
-Developed by: yogeshwaran.A
-RegisterNumber:212223040249
-```
-```
-module EXP_6(q, q_bar, s,r, clk, reset);//SR Flip Flop Behavioral Level using ‘case’ 
+module flipflop(q, q_bar, s,r, clk, reset);//SR Flip Flop Behavioral Level using ‘case’ 
   input s,r,clk, reset;
   output reg q;
   output q_bar;
  
   always@(posedge clk) begin // for synchronous reset
-    if(!reset)       
-			q <= 0;
+    if(!reset)       q <= 0;
     else 
   begin
       case({s,r})       
-	     2'b00: q <= q;    // No change
-        2'b01:q<=1'b0;   // Write logic for reset
-        2'b10:q<=1'b1;   // Write logic for set
-        2'b11:q<=1'bx;   // Write logic for Invalid state
+	       2'b00: q <= q;		  
+        2'b01: q <= 1'b0;
+        2'b10: q <= 1'b1;		 
+        2'b11: q <= 1'bx;                     
       endcase
     end
   end
@@ -73,10 +62,10 @@ module EXP_6(q, q_bar, s,r, clk, reset);//SR Flip Flop Behavioral Level using �
 endmodule
 ```
 **RTL LOGIC FOR FLIPFLOPS**
-![image](https://github.com/Rajaraman77/SR-FLIPFLOP-USING-CASE/assets/150319383/64c39348-ddff-4977-a45b-1f4d0906d9bc)
+![image](https://github.com/prideeshm/SR-FLIPFLOP-USING-CASE/assets/144870483/f3f84a17-5794-4984-b348-7c43ae288c79)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![image](https://github.com/Rajaraman77/SR-FLIPFLOP-USING-CASE/assets/150319383/f261ac42-e841-4217-b4a9-0c9cf861459a)
+![image](https://github.com/prideeshm/SR-FLIPFLOP-USING-CASE/assets/144870483/886a5161-98c9-4870-830f-b35f434cfee9)
 
-**RESULT:**
-
- The observation of the simulation results and confirm the successful execution of the program.
+**RESULTS**
+Therefore the code has been successfully executed.
